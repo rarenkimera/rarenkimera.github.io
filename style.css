@@ -15,24 +15,39 @@ body {
   color: white;
 }
 
-
-#title {
-  color: #FFCBE0;
-  margin-left: 1vw;
-  font-size:5vw
-}
+a { text-decoration: none; color: #FFCBE0;}
+a:visited { text-decoration: none; color: #FFCBE0;}
+a:hover { text-decoration: none; color:#D0A5B7; }
+a:focus { text-decoration: none; color:#D0A5B7; }
+a:active { text-decoration: none;  color: #D0A5B7;}
 
 #sidebar {
-  position: relative;
-  min-height: 150px;
+  position: fixed;
+  font-weight: bold;
   color: #FFCBE0;
-  margin-left: 1vw;
   font-size:1vw;
+  margin-left: 1vw;
+  width:16%;
+  height: 100%;
 }
 
+#title {
+  font-size:5vw;
+}
 
 #sidebarInfo {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 1vw;
+  width: 50%;
 }
+
+#images {
+  padding-top:5%;
+  padding-left:18%;
+}
+
+img {
+  width: auto;
+  height: 30em;
+}
+
