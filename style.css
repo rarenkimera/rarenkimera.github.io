@@ -22,13 +22,14 @@ a:focus { text-decoration: none; color:#D0A5B7; }
 a:active { text-decoration: none;  color: #D0A5B7;}
 
 #sidebar {
-  position: fixed;
+  position: fixed; /* fixed postion prevents scrolling*/
   font-weight: bold;
   color: #FFCBE0;
-  font-size:1vw;
+  font-size:1vw; /*vw font size - viewport width changes on browser size*/
   margin-left: 1vw;
-  width:16%;
   height: 100%;
+  /*testing purposes*/
+  /* border: thin solid white; */
 }
 
 #title {
@@ -36,18 +37,19 @@ a:active { text-decoration: none;  color: #D0A5B7;}
 }
 
 #sidebarInfo {
-  position: absolute;
+  position: absolute; /* allows 'about me' and 'contact' to be put on bottom left corner always*/
   bottom: 1vw;
   width: 50%;
 }
 
 #images {
-  padding-top:5%;
+  padding-top:6%;
   padding-left:18%;
 }
 
 img {
   width: auto;
   height: 30em;
+  border-radius: 2%;
+  padding: .2vw;
 }
-
