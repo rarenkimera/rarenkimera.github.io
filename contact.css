@@ -1,0 +1,13 @@
+#contactlist {
+    /* centers row in images div */
+    padding-left: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+p {
+    padding:1em;
+}
+
+#pngIcon1, #pngIcon2, #pngIcon3 {
+    width: 2vw;
+}

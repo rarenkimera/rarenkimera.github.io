@@ -1,0 +1,15 @@
+#row{
+    /* centers row in images div */
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center; /* centers images in row*/
+}
+
+img {
+    border-radius: 1vw;
+    padding: .2vw;
+}
+
+#row1Img1, #row1Img2 {
+    height: 36.5834039516395vw;
+}

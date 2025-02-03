@@ -10,9 +10,9 @@
 
 body {
   background-color: black; /* same as #ffcc99 */
-  font-size: 100%;
   font-family:'Roboto',verdana;
   color: white;
+  font-size: 100%; /* set font size as % in body for equal scale on all pages*/
 }
 
 a { text-decoration: none; color: #FFCBE0;}
@@ -22,50 +22,30 @@ a:focus { text-decoration: none; color:#D0A5B7; }
 a:active { text-decoration: none;  color: #D0A5B7;}
 
 #sidebar {
-  position: fixed; /* fixed postion prevents scrolling*/
-  font-weight: bold;
-  color: #FFCBE0;
-  font-size:1vw; /*vw font size - viewport width changes on browser size*/
-  margin-left: 1vw;
+  position: fixed; /* fixed postion keeps it stationary and prevents scrolling*/
+  color: #FFCBE0; 
+  margin-left: 1em;/*vw margin size - viewport width changes on browser size*/
+  width: 18em;
   height: 100%;
+  font-weight: bold;
+  font-size:1em;
   /*testing purposes*/
   /* border: thin solid white; */
 }
 
 #title {
-  font-size:5vw;
+  font-size:5.5em;
 }
 
 #sidebarInfo {
   position: absolute; /* allows 'about me' and 'contact' to be put on bottom left corner always*/
-  bottom: 1vw;
+  bottom: 1em;
 }
 
-#images {
-  padding-top:6%;
-  margin-left:17.3%;
+#mainBody {
+  padding-top:6em;
+  margin-left:19.5em;
+  height: 100%;
+  float:none;
   align-items: center;
-}
-
-#row{
-  /* centers row in images div */
-  margin-left: auto;
-  margin-right: auto;
-  text-align:center; /* centers images in row*/
-}
-img {
-  border-radius: 2%;
-  padding: .2vw;
-}
-
-#row1Img1, #row1Img2 {
-  height: 36.5834039516395vw;
-}
-
-#row2Img1, #row2Img2 {
-  height: 46.88644688644688vw;
-}
-
-#row3Img1 {
-  width: 75.5vw;
 }

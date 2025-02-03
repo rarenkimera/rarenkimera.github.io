@@ -8,42 +8,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!--Stylesheet-->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <!--
     Temporary Resources
     https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
     https://stackoverflow.com/questions/10312857/blue-and-purple-default-links-how-to-remove
     https://www.codespeedy.com/how-to-find-the-resolution-of-an-image-in-javascript/ 
+    https://stackoverflow.com/questions/31617136/avoid-elliptical-shape-in-css-border-radius 
+    https://stackoverflow.com/questions/43545565/same-css-producing-different-font-sizes-on-different-pages
     -->
 </head>
 <body>   
     <div id="sidebar">
-        <h1 id="title">RAREN</h1>
-        <a href="#">home</a><br>
-        <a href="#">illustrations</a><br>
-        <a href="#">3D work</a><br>
-        <a href="#">design</a><br>
+        <a id="title" href="index.html">RAREN</a><br>
+        <a href="index.html">home</a><br>
+        <a href="illustrations.html">illustrations</a><br>
+        <a href="3dwork.html">3D work</a><br>
+        <a href="design.html">design</a><br>
 
         <div id="sidebarInfo">
-            <a href="#">about me</a><br>
-                <a href="#">contact</a><br>
+            <a href="aboutme.html">about me</a><br>
+            <a href="contact.html">contact</a><br>
         </div>
     </div>
 
-    <div id="images">
+    <div id="mainBody">
         <div id="row">
             <img id="row1Img1" src="illustrations/1.png" alt="Image_1_Missing">
             <img id="row1Img2" src="illustrations/2.JPG" alt="Image_2_Missing">
         </div>
-        <div id="row">
-            <img id="row2Img1" src="illustrations/3.png" alt="Image_3_Missing">
-            <img id="row2Img2" src="illustrations/4.PNG" alt="Image_4_Missing">
-        </div>
-        <div id="row">
-            <img id="row3Img1" src="illustrations/5.PNG" alt="Image_5_Missing">
-        </div>
     </div>
     <script>
-        console.log('Hello, World!');
+        console.log('Home');
         // A row has 2 images, with equal height and variable width that equals 75vw
         // calculates height of both images in vw, where total width of two images equals 75vw to prevent 2nd image from going to next line
         // aspect ratio is maintained in css
