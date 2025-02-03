@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Raren's Illustrations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <!--link to Roboto Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,6 +41,25 @@
 
     <script>
         console.log('Illustrations');
+        // A row has 2 images, with equal height and variable width that equals 75vw, 68vw
+        // calculates height of both images in vw, where total width of two images equals total width (vw) to prevent 2nd image from going to next line
+        // aspect ratio is maintained in css
+        function imgHeightCalculate(image1ID, image2ID) {
+            let img = document.getElementById(image1ID);
+            img.addEventListener('load',imgHeightCalculate)
+            let w1 = img.naturalWidth;
+            let h1 = img.naturalHeight;
+
+            img = document.getElementById(image2ID);
+            let w2 = img.naturalWidth;
+            let h2 = img.naturalHeight;
+            console.log("Original width=" + w1 + " px, " + "Original height=" + h1+" px");
+            console.log("Original width=" + w2 + " px, " + "Original height=" + h2+" px");
+            let height = 68/((w1/h1) + (w2/h2));
+            console.log(height);
+        }
+        imgHeightCalculate('row2Img1', 'row2Img2');
+        //if there is odd number of images, last image width is 75vw (75.5vw looks more equal for some reason)
     </script>
 </body>
 </html> 

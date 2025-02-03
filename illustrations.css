@@ -19,5 +19,31 @@ img {
 }
 
 #row3Img1 {
-    width: 90%;
+    width: 75vw;
+}
+
+@media screen and (max-width: 1400px) {
+    #row1Img1, #row1Img2 {
+        height: 33.168952916153145vw;
+    }
+    #row2Img1, #row2Img2 {
+        height: 42.51037851037851vw;
+    }
+    #row3Img1 {
+        width: 68vw;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #row1Img1, #row1Img2 {
+        width: 90%;
+        height: auto;
+    }
+    #row2Img1, #row2Img2 {
+        width: 90%;
+        height: auto;
+    }
+    #row3Img1 {
+        width: 90%;
+    }
 }

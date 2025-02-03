@@ -13,3 +13,16 @@ img {
 #row1Img1, #row1Img2 {
     height: 36.5834039516395vw;
 }
+
+@media screen and (max-width: 1400px) {
+    #row1Img1, #row1Img2 {
+        height: 33.168952916153145vw;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #row1Img1, #row1Img2 {
+        width: 90%; /* The width is 100%, when the viewport is 800px or smaller */
+        height: auto;
+    }
+}

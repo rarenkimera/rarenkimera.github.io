@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Raren's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <!--link to Roboto Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +17,8 @@
     https://www.codespeedy.com/how-to-find-the-resolution-of-an-image-in-javascript/ 
     https://stackoverflow.com/questions/31617136/avoid-elliptical-shape-in-css-border-radius 
     https://stackoverflow.com/questions/43545565/same-css-producing-different-font-sizes-on-different-pages
+    https://stackoverflow.com/questions/676650/scaling-html-layout-to-the-screen-size 
+    https://www.w3schools.com/html/html_responsive.asp
     -->
 </head>
 <body>   
@@ -40,8 +43,8 @@
     </div>
     <script>
         console.log('Home');
-        // A row has 2 images, with equal height and variable width that equals 75vw
-        // calculates height of both images in vw, where total width of two images equals 75vw to prevent 2nd image from going to next line
+        // A row has 2 images, with equal height and variable width that equals 75vw, 68vw
+        // calculates height of both images in vw, where total width of two images equals total width (vw) to prevent 2nd image from going to next line
         // aspect ratio is maintained in css
         function imgHeightCalculate(image1ID, image2ID) {
             let img = document.getElementById(image1ID);
