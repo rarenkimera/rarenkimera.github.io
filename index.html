@@ -12,6 +12,7 @@
     Temporary Resources
     https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
     https://stackoverflow.com/questions/10312857/blue-and-purple-default-links-how-to-remove
+    https://www.codespeedy.com/how-to-find-the-resolution-of-an-image-in-javascript/ 
     -->
 </head>
 <body>   
@@ -29,12 +30,39 @@
     </div>
 
     <div id="images">
-        <img src="illustrations/1.png" alt="Fish, Girl, Fingers">
-        <img src="illustrations/2.JPG" alt="Fish, Girl, Mirror, Stars">
-        <img src="illustrations/3.png" alt="Girl, Floating, Water">
-        <img src="illustrations/4.PNG" alt="Fish, Girl, Sitting">
-        <img src="illustrations/5.PNG" alt="Snake, Girl">
+        <div id="row">
+            <img id="row1Img1" src="illustrations/1.png" alt="Image_1_Missing">
+            <img id="row1Img2" src="illustrations/2.JPG" alt="Image_2_Missing">
+        </div>
+        <div id="row">
+            <img id="row2Img1" src="illustrations/3.png" alt="Image_3_Missing">
+            <img id="row2Img2" src="illustrations/4.PNG" alt="Image_4_Missing">
+        </div>
+        <div id="row">
+            <img id="row3Img1" src="illustrations/5.PNG" alt="Image_5_Missing">
+        </div>
     </div>
-    
+    <script>
+        console.log('Hello, World!');
+        // A row has 2 images, with equal height and variable width that equals 75vw
+        // calculates height of both images in vw, where total width of two images equals 75vw to prevent 2nd image from going to next line
+        // aspect ratio is maintained in css
+        function imgHeightCalculate(image1ID, image2ID) {
+            let img = document.getElementById(image1ID);
+            img.addEventListener('load',imgHeightCalculate)
+            let w1 = img.naturalWidth;
+            let h1 = img.naturalHeight;
+
+            img = document.getElementById(image2ID);
+            let w2 = img.naturalWidth;
+            let h2 = img.naturalHeight;
+            console.log("Original width=" + w1 + " px, " + "Original height=" + h1+" px");
+            console.log("Original width=" + w2 + " px, " + "Original height=" + h2+" px");
+            let height = 75/((w1/h1) + (w2/h2));
+            console.log(height);
+        }
+        //imgHeightCalculate('row1Img1', 'row1Img2');
+        //if there is odd number of images, last image width is 75vw (75.5vw looks more equal for some reason)
+    </script>
 </body>
 </html> 

@@ -39,17 +39,33 @@ a:active { text-decoration: none;  color: #D0A5B7;}
 #sidebarInfo {
   position: absolute; /* allows 'about me' and 'contact' to be put on bottom left corner always*/
   bottom: 1vw;
-  width: 50%;
 }
 
 #images {
   padding-top:6%;
-  padding-left:18%;
+  margin-left:17.3%;
+  align-items: center;
 }
 
+#row{
+  /* centers row in images div */
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center; /* centers images in row*/
+}
 img {
-  width: auto;
-  height: 30em;
   border-radius: 2%;
   padding: .2vw;
+}
+
+#row1Img1, #row1Img2 {
+  height: 36.5834039516395vw;
+}
+
+#row2Img1, #row2Img2 {
+  height: 46.88644688644688vw;
+}
+
+#row3Img1 {
+  width: 75.5vw;
 }
