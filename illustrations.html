@@ -26,40 +26,30 @@
     </div>
 
     <div id="mainBody">
-        <div id="row">
-            <img id="row1Img1" src="illustrations/1.png" alt="Image_1_Missing">
-            <img id="row1Img2" src="illustrations/2.JPG" alt="Image_2_Missing">
+        <div class="row">
+            <img class="imgShowcase" id="row1Img1" src="illustrations/1.png" alt="Image_1_Missing" onclick="showImgPreview(this);">
+            <img class="imgShowcase" id="row1Img2" src="illustrations/2.JPG" alt="Image_2_Missing" onclick="showImgPreview(this);">
         </div>
-        <div id="row">
-            <img id="row2Img1" src="illustrations/3.png" alt="Image_3_Missing">
-            <img id="row2Img2" src="illustrations/4.PNG" alt="Image_4_Missing">
+        <div class="row">
+            <img class="imgShowcase" id="row2Img1" src="illustrations/3.png" alt="Image_3_Missing" onclick="showImgPreview(this);">
+            <img class="imgShowcase" id="row2Img2" src="illustrations/4.PNG" alt="Image_4_Missing" onclick="showImgPreview(this);">
         </div>
-        <div id="row">
-            <img id="row3Img1" src="illustrations/5.PNG" alt="Image_5_Missing">
+        <div class="row">
+            <img class="imgShowcase" id="row3Img1" src="illustrations/5.PNG" alt="Image_5_Missing" onclick="showImgPreview(this);">
         </div>
     </div>
 
+    <div id="imgPreviewContainer">
+        <img id="imgPreview">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    </div>
     <script>
         console.log('Illustrations');
-        // A row has 2 images, with equal height and variable width that equals 75vw, 68vw
-        // calculates height of both images in vw, where total width of two images equals total width (vw) to prevent 2nd image from going to next line
-        // aspect ratio is maintained in css
-        function imgHeightCalculate(image1ID, image2ID) {
-            let img = document.getElementById(image1ID);
-            img.addEventListener('load',imgHeightCalculate)
-            let w1 = img.naturalWidth;
-            let h1 = img.naturalHeight;
-
-            img = document.getElementById(image2ID);
-            let w2 = img.naturalWidth;
-            let h2 = img.naturalHeight;
-            console.log("Original width=" + w1 + " px, " + "Original height=" + h1+" px");
-            console.log("Original width=" + w2 + " px, " + "Original height=" + h2+" px");
-            let height = 68/((w1/h1) + (w2/h2));
-            console.log(height);
+        function showImgPreview(imgs) {
+            let expandImg = document.getElementById("imgPreview");
+            expandImg.src = imgs.src;
+            expandImg.parentElement.style.display = "block";
         }
-        imgHeightCalculate('row2Img1', 'row2Img2');
-        //if there is odd number of images, last image width is 75vw (75.5vw looks more equal for some reason)
     </script>
 </body>
 </html> 

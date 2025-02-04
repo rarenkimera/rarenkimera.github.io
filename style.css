@@ -47,5 +47,37 @@ a:active { text-decoration: none;  color: #D0A5B7;}
   margin-left:19.5em;
   height: 100%;
   float:none;
-  align-items: center;
+}
+
+.imgShowcase:hover {
+  opacity: .8;
+  transition: transform 0.4s;
+  transform: scale(0.99);
+}
+
+#imgPreviewContainer {
+  text-align:center;
+  position: fixed;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.9);
+  display: none;
+}
+
+.closebtn {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+#imgPreview {
+  margin-top:2vw;
+  max-width: 90%;
+  max-height: 90%;
 }

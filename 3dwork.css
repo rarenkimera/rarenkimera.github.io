@@ -1,4 +1,4 @@
-#row{
+.row{
     /* centers row in images div */
     margin-left: auto;
     margin-right: auto;
@@ -9,6 +9,7 @@ img {
     border-radius: 1vw;
     padding: .2vw;
 }
+
 #row1Img1, #row2Img1 {
     width: 90%;
 }
