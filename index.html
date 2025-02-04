@@ -21,15 +21,19 @@
     https://www.w3schools.com/html/html_responsive.asp
     https://www.w3schools.com/charsets/ref_html_entities_4.asp 
     https://stackoverflow.com/questions/6169666/how-to-resize-an-image-to-fit-in-the-browser-window 
+    https://www.w3schools.com/jsref/prop_style_cursor.asp 
+    https://www.w3schools.com/cssref/pr_class_cursor.php
     -->
 </head>
 <body>   
     <div id="sidebar">
-        <a id="title" href="index.html">RAREN</a><br>
-        <a href="index.html">home</a><br>
-        <a href="illustrations.html">illustrations</a><br>
-        <a href="3dwork.html">3D work</a><br>
-        <a href="design.html">design</a><br>
+        <div id="sidebarNav">
+            <a id="title" href="index.html">RAREN</a><br>
+            <a href="index.html">home</a><br>
+            <a href="illustrations.html">illustrations</a><br>
+            <a href="3dwork.html">3D work</a><br>
+            <a href="design.html">design</a><br>
+        </div>
 
         <div id="sidebarInfo">
             <a href="aboutme.html">about me</a><br>
@@ -44,9 +48,10 @@
         </div>
     </div>
 
+    <!--container that contains the close button and empty image for when user clicks on an image-->
     <div id="imgPreviewContainer">
-        <img id="imgPreview">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="imgPreview">
     </div>
 
     <script>
@@ -71,9 +76,11 @@
         //imgHeightCalculate('row1Img1', 'row1Img2');
         //if there is odd number of images, last image width is 75vw (75.5vw looks more equal for some reason)
 
+        // gets the image that was clicked and sets the empty image in the imgPreviewContainer to that image
         function showImgPreview(imgs) {
             let expandImg = document.getElementById("imgPreview");
             expandImg.src = imgs.src;
+            // unhides the container
             expandImg.parentElement.style.display = "block";
         }
     </script>

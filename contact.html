@@ -13,11 +13,13 @@
 </head>
 <body>   
     <div id="sidebar">
-        <a id="title" href="index.html">RAREN</a><br>
-        <a href="index.html">home</a><br>
-        <a href="illustrations.html">illustrations</a><br>
-        <a href="3dwork.html">3D work</a><br>
-        <a href="design.html">design</a><br>
+        <div id="sidebarNav">
+            <a id="title" href="index.html">RAREN</a><br>
+            <a href="index.html">home</a><br>
+            <a href="illustrations.html">illustrations</a><br>
+            <a href="3dwork.html">3D work</a><br>
+            <a href="design.html">design</a><br>
+        </div>
 
         <div id="sidebarInfo">
             <a href="aboutme.html">about me</a><br>
@@ -27,14 +29,24 @@
     
     <div id="mainBody">
         <div id="contactlist">
-            <p>Contacts</p>
-            <p><img id="pngIcon1" src="icons/instagram-logo-transparent.png" alt="Instagram_Image_Missing"> Instagram: <a href="index.html">https://www.instagram.com/rarenkimera/</a></p>
-            <p><img id="pngIcon2" src="icons/twitterx-logo-transparent.png" alt="TwitterX_Image_Missing"> Twitter: <a href="index.html">https://x.com/rarenkimera</a></p>
-            <p><img id="pngIcon3" src="icons/gmail-logo-transparent.png" alt="Gmail_Image_Missing"> E-Mail: <a href="index.html">rarenkimera@gmail.com</a></p>
+            <div class="center">Contact Me!</div>
+            <div class="center"><img id="pngIcon1" src="icons/instagram-logo-transparent.png" alt="Instagram_Image_Missing"><a href="https://www.instagram.com/rarenkimera/" target='_blank'>https://www.instagram.com/rarenkimera/</a></div>
+            <div class="center"><img id="pngIcon2" src="icons/twitterx-logo-transparent.png" alt="TwitterX_Image_Missing"><a href="https://x.com/rarenkimera" target='_blank'>https://x.com/rarenkimera</a></div>
+            <!--Button that hides email from spam, ads and web scrapers-->
+            <div class="center"><img id="pngIcon3" src="icons/gmail-logo-transparent.png" alt="Gmail_Image_Missing"><button id="emailbutton" type="button" onclick="showEmail()">View Email</button><a id="emailHidden"></a></div>
         </div>
     </div>
+    
     <script>
         console.log('Contacts');
+        function showEmail() {
+            let button = document.getElementById("emailbutton");
+            button.style.display = "none";
+            let email = document.getElementById("emailHidden");
+            email.href="mailto:rarenkimera@gmail.com"
+            email.target='_blank'
+            email.innerHTML = "rarenkimera@gmail.com";
+        }
     </script>
 </body>
 </html> 

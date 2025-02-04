@@ -13,11 +13,13 @@
 </head>
 <body>   
     <div id="sidebar">
-        <a id="title" href="index.html">RAREN</a><br>
-        <a href="index.html">home</a><br>
-        <a href="illustrations.html">illustrations</a><br>
-        <a href="3dwork.html">3D work</a><br>
-        <a href="design.html">design</a><br>
+        <div id="sidebarNav">
+            <a id="title" href="index.html">RAREN</a><br>
+            <a href="index.html">home</a><br>
+            <a href="illustrations.html">illustrations</a><br>
+            <a href="3dwork.html">3D work</a><br>
+            <a href="design.html">design</a><br>
+        </div>
 
         <div id="sidebarInfo">
             <a href="aboutme.html">about me</a><br>
@@ -27,12 +29,24 @@
 
     <div id="mainBody">
         <div class="row">
-            <img id="row1Img1" src="design/1.png" alt="Image_1_Missing">
+            <img  class="imgShowcase" id="row1Img1" src="design/1.png" alt="Image_1_Missing" onclick="showImgPreview(this);">
         </div>
+    </div>
+
+    <div id="imgPreviewContainer">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="imgPreview">
     </div>
 
     <script>
         console.log('Design');
+
+        function showImgPreview(imgs) {
+            let expandImg = document.getElementById("imgPreview");
+            expandImg.src = imgs.src;
+            expandImg.parentElement.style.display = "block";
+        }
+
     </script>
 </body>
 </html> 
