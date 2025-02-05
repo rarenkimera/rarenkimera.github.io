@@ -1,10 +1,6 @@
 * {
   margin: 0;
-  cursor:url(cursors/cursor.cur), default;
-}
-
-a, img {
-  cursor:url(cursors/cursor1.cur), auto;
+  cursor:url(cursors/cursorFish.cur), default;
 }
 
 body {
@@ -20,11 +16,22 @@ a:hover { text-decoration: none; color:#D0A5B7; }
 a:focus { text-decoration: none; color:#D0A5B7; }
 a:active { text-decoration: none;  color: #D0A5B7;}
 
+#titleMobile {
+  position: absolute;
+  color: #FFCBE0; 
+  padding-right: .3em;
+  right:0;
+  text-align: right;
+  font-weight: bold;
+  font-size:5.5em;
+  display: none;
+}
+
 /* Sidebar contains title and navigation choices*/
 #sidebar {
   position: fixed; /* fixed postion keeps it stationary and prevents scrolling*/
   color: #FFCBE0; 
-  margin-left: 1em;/*vw margin size - viewport width changes on browser size*/
+  padding-left: 1em;/*vw margin size - viewport width changes on browser size*/
   height: 100%;
   font-weight: bold;
   font-size:1em;
@@ -37,15 +44,22 @@ a:active { text-decoration: none;  color: #D0A5B7;}
 }
 
 #sidebarInfo {
-  position: absolute; /* allows 'about me' and 'contact' to be put on bottom left corner always*/
+  position: fixed; /* allows 'about me' and 'contact' to be put on bottom left corner always*/
   bottom: 1em;
 }
 
 #mainBody {
   padding-top:6em;
-  margin-left:19.5em;
+  margin-left:18.8em;
   height: 100%;
-  float:none;
+}
+
+/* bandaid fix so that fish cursor works at all times*/
+#fullCursor {
+  position: fixed;
+  margin-left:18.8em;
+  height: 100%;
+  width: 100%;
 }
 
 .imgShowcase:hover {
@@ -71,12 +85,33 @@ a:active { text-decoration: none;  color: #D0A5B7;}
   top: 1%;
   right: 1%;
   color: white;
-  font-size: 35px;
+  font-size: 3em;
   cursor: pointer;
 }
 
 #imgPreview {
-  margin-top:2.5em;
+  margin-top:2em;
   max-width: 90%;
   max-height: 90%;
+}
+
+@media screen and (max-width: 600px) {
+  #titleMobile {
+    display: block;
+  }
+
+  #sidebar {
+    display: none;
+  }
+  
+  #mainBody {
+    padding-top:7em;
+    margin-left:0;
+  }
+  .closebtn {
+    font-size: 6em;
+  }
+  #imgPreview {
+    margin-top:8em;
+  }
 }

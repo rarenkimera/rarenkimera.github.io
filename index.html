@@ -23,12 +23,17 @@
     https://stackoverflow.com/questions/6169666/how-to-resize-an-image-to-fit-in-the-browser-window 
     https://www.w3schools.com/jsref/prop_style_cursor.asp 
     https://www.w3schools.com/cssref/pr_class_cursor.php
+    https://www.cursor.cc/
+    https://www.w3schools.com/css/css3_mediaqueries_ex.asp
     -->
 </head>
-<body>   
+<body>  
+    <a id="titleMobile" href="index.html">RAREN</a>
+    <div id="navbarMobile"></div>
+    
     <div id="sidebar">
+        <a id="title" href="index.html">RAREN</a><br>
         <div id="sidebarNav">
-            <a id="title" href="index.html">RAREN</a><br>
             <a href="index.html">home</a><br>
             <a href="illustrations.html">illustrations</a><br>
             <a href="3dwork.html">3D work</a><br>
@@ -40,13 +45,13 @@
             <a href="contact.html">contact</a><br>
         </div>
     </div>
-
     <div id="mainBody">
         <div class="row">
             <img class="imgShowcase" id="row1Img1" src="illustrations/1.png" alt="Image_1_Missing" onclick="showImgPreview(this);">
             <img class="imgShowcase" id="row1Img2" src="illustrations/2.JPG" alt="Image_2_Missing" onclick="showImgPreview(this);">
         </div>
     </div>
+    <div id="fullCursor"></div>
 
     <!--container that contains the close button and empty image for when user clicks on an image-->
     <div id="imgPreviewContainer">
