@@ -25,12 +25,26 @@
     https://www.w3schools.com/cssref/pr_class_cursor.php
     https://www.cursor.cc/
     https://www.w3schools.com/css/css3_mediaqueries_ex.asp
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     -->
 </head>
-<body>  
-    <a id="titleMobile" href="index.html">RAREN</a>
-    <div id="navbarMobile"></div>
-    
+<body> 
+    <div id="topBarMobile"> 
+        <span onclick="showNavMobile();" id="navOpenButton" >&equiv;</span>
+        <a id="titleMobile" href="index.html">RAREN</a>
+    </div>
+
+    <div id="sideBarMobile"> 
+        <span onclick="closeNavMobile();" id="navCloseButton" >&times;</span>
+        <a class="navButtonMobile" href="index.html">home</a><br>
+        <a class="navButtonMobile" href="illustrations.html">illustrations</a><br>
+        <a class="navButtonMobile" href="3dwork.html">3D work</a><br>
+        <a class="navButtonMobile" href="design.html">design</a><br>
+        <a class="navButtonMobile" href="aboutme.html">about me</a><br>
+        <a class="navButtonMobile" href="contact.html">contact</a><br>
+        <a class="navButtonMobileBorder"></a>
+    </div>
+
     <div id="sidebar">
         <a id="title" href="index.html">RAREN</a><br>
         <div id="sidebarNav">
@@ -87,6 +101,15 @@
             expandImg.src = imgs.src;
             // unhides the container
             expandImg.parentElement.style.display = "block";
+        }
+        /* transitions mobile navbar in and out from left side */
+        function showNavMobile() {
+            let navMobile = document.getElementById("sideBarMobile");
+            navMobile.style.left = "0%";
+        }
+        function closeNavMobile() {
+            let navMobile = document.getElementById("sideBarMobile");
+            navMobile.style.left = "-50%";
         }
     </script>
 </body>

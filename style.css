@@ -16,16 +16,58 @@ a:hover { text-decoration: none; color:#D0A5B7; }
 a:focus { text-decoration: none; color:#D0A5B7; }
 a:active { text-decoration: none;  color: #D0A5B7;}
 
-#titleMobile {
+
+#topBarMobile {
   position: absolute;
-  color: #FFCBE0; 
-  padding-right: .3em;
+  left: 0;
   right:0;
-  text-align: right;
+  display: flex;
+  justify-content: space-between; /* makes space between all objects in this container equal (even distribution)*/
+  align-items: center;
+  display: none;  
+}
+#navOpenButton {
+  color: #FFCBE0;
+  font-size:3em;
+  padding-left: .5em;
+}
+#titleMobile {
+  color: #FFCBE0; 
+  font-size:4.5em;
   font-weight: bold;
-  font-size:5.5em;
+  padding-right: .3em;
+}
+
+
+#sideBarMobile {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding-top: .3em;
+  width:50%;
+  height:100%;
+  background-color: black;
+  left: -50%; /*stays outside of screen on left and transitions with functions*/
+  transition-duration: .5s;
   display: none;
 }
+#navCloseButton {
+  color: #FFCBE0; 
+  font-size: 4em;
+  padding-left: .4em;
+  padding-bottom: .2em;
+}
+.navButtonMobile {
+  font-size:5vw;
+  padding-left: .5em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border-top: thin solid #FFCBE0;
+}
+.navButtonMobileBorder {
+  border-top: thin solid #FFCBE0;
+}
+
 
 /* Sidebar contains title and navigation choices*/
 #sidebar {
@@ -38,11 +80,9 @@ a:active { text-decoration: none;  color: #D0A5B7;}
   /*testing purposes*/
   /* border: thin solid white; */
 }
-
 #title {
   font-size:5.5em;
 }
-
 #sidebarInfo {
   position: fixed; /* allows 'about me' and 'contact' to be put on bottom left corner always*/
   bottom: 1em;
@@ -54,6 +94,7 @@ a:active { text-decoration: none;  color: #D0A5B7;}
   height: 100%;
 }
 
+
 /* bandaid fix so that fish cursor works at all times*/
 #fullCursor {
   position: fixed;
@@ -62,12 +103,12 @@ a:active { text-decoration: none;  color: #D0A5B7;}
   width: 100%;
 }
 
+
 .imgShowcase:hover {
   opacity: .8;
   transition: transform 0.4s;
   transform: scale(0.99);
 }
-
 #imgPreviewContainer {
   position: fixed;
   float:none;
@@ -79,7 +120,6 @@ a:active { text-decoration: none;  color: #D0A5B7;}
   background-color: rgba(0,0,0,0.9);
   display: none;
 }
-
 .closebtn {
   position: absolute;
   top: 1%;
@@ -88,18 +128,20 @@ a:active { text-decoration: none;  color: #D0A5B7;}
   font-size: 3em;
   cursor: pointer;
 }
-
 #imgPreview {
   margin-top:2em;
   max-width: 90%;
   max-height: 90%;
 }
 
-@media screen and (max-width: 600px) {
-  #titleMobile {
-    display: block;
-  }
 
+@media screen and (max-width: 600px) {
+  #topBarMobile {
+    display: flex;
+  }
+  #sideBarMobile {
+    display: flex;
+  }
   #sidebar {
     display: none;
   }
@@ -108,8 +150,14 @@ a:active { text-decoration: none;  color: #D0A5B7;}
     padding-top:7em;
     margin-left:0;
   }
+
+  .imgShowcase:hover {
+    opacity: 1;
+    transition: none;
+    transform: none;
+  }
   .closebtn {
-    font-size: 6em;
+    font-size: 5em;
   }
   #imgPreview {
     margin-top:8em;
