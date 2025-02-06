@@ -10,11 +10,11 @@ body {
   font-size: 100%; /* set font size as % in body for equal scale on all pages*/
 }
 
-a { text-decoration: none; color: #FFCBE0;}
-a:visited { text-decoration: none; color: #FFCBE0;}
-a:hover { text-decoration: none; color:#D0A5B7; }
-a:focus { text-decoration: none; color:#D0A5B7; }
-a:active { text-decoration: none;  color: #D0A5B7;}
+a, #titleMobile, #navOpenButton:hover, #navCloseButton:hover { text-decoration: none; color: #FFCBE0;}
+a:visited, #titleMobile:hover, #navOpenButton:hover, #navCloseButton:hover  { text-decoration: none; color: #FFCBE0;}
+a:hover, #titleMobile:hover, #navOpenButton:hover, #navCloseButton:hover { text-decoration: none; color:#D0A5B7; }
+a:focus, #titleMobile:hover, #navOpenButton:hover, #navCloseButton:hover  { text-decoration: none; color:#D0A5B7; }
+a:active, #titleMobile:hover, #navOpenButton:hover, #navCloseButton:hover  { text-decoration: none;  color: #D0A5B7;}
 
 
 #topBarMobile {
@@ -35,13 +35,12 @@ a:active { text-decoration: none;  color: #D0A5B7;}
   color: #FFCBE0; 
   font-size:4.5em;
   font-weight: bold;
-  padding-right: .3em;
 }
 
 
 #sideBarMobile {
   position: fixed;
-  display: none;
+  display: flex;
   flex-direction: column;
   padding-top: .3em;
   width:50%;
@@ -49,10 +48,11 @@ a:active { text-decoration: none;  color: #D0A5B7;}
   background-color: black;
   left: -50%; /*stays outside of screen on left and transitions with functions*/
   transition-duration: .5s;
+  display: none;
 }
 #navCloseButton {
   color: #FFCBE0; 
-  font-size: 4em;
+  font-size: 3.5em;
   padding-left: .4em;
   padding-bottom: .2em;
 }
@@ -91,6 +91,7 @@ a:active { text-decoration: none;  color: #D0A5B7;}
   padding-top:6em;
   margin-left:18.8em;
   height: 100%;
+  
 }
 
 

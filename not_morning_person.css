@@ -3,16 +3,17 @@
     text-align:center;
 }
 
-.row{
-    /* centers row in images div */
-    margin-left: auto;
-    margin-right: auto;
-    text-align:center; /* centers images in row*/
-}
 
 img {
     border-radius: 1vw;
     padding: .2vw;
+}
+
+/*
+.row{
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center; 
 }
 
 #row1Img1, #row1Img2, #row2Img1, #row2Img2, #row3Img1, #row3Img2 , #row4Img1, #row4Img2 , #row5Img1, #row5Img2 , #row6Img1, #row6Img2 {
@@ -22,17 +23,67 @@ img {
 #row7Img1 {
     width: 75.5vw;
 }
+*/
+
+#morningSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;/*items positioned beginning of the container, 'normal' (default) stretches image*/
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%; 
+}
+#mainImgMorning {
+    height: 36vw;
+}
+#imgScrollContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: auto; /* makes scrollbar on div, not universal*/
+    flex-wrap: nowrap;  
+    height: 36vw;  
+}
+.morningImgs {
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media screen and (max-width: 1400px) {
+    /*
     #row1Img1, #row1Img2, #row2Img1, #row2Img2, #row3Img1, #row3Img2 , #row4Img1, #row4Img2 , #row5Img1, #row5Img2 , #row6Img1, #row6Img2 {
         height: 19.125vw;
     }
     #row7Img1 {
         width: 68vw;
     }
+    */
+    #morningSection {
+        flex-direction: column;
+        justify-content: left; 
+        align-items: center;
+    }
+    #mainImgMorning {
+        width: 95%;
+        height: auto;
+    }
+    #imgScrollContainer {
+        flex-direction: row;
+        width: 95%;
+        height: auto;
+        padding-top:.5vw;
+    }
+    .morningImgs {
+        width:20vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 1100px) {
+    /*
     #row1Img1, #row1Img2, #row2Img1, #row2Img2, #row3Img1, #row3Img2 , #row4Img1, #row4Img2 , #row5Img1, #row5Img2 , #row6Img1, #row6Img2 {
         width: 90%;
         height: auto;
@@ -40,5 +91,34 @@ img {
     #row7Img1 {
         width: 90%;
         height: auto;
+    }
+    */
+    #artTitle{
+        font-size:3em;
+        text-align:center;
+    }
+    #morningSection {
+        padding-top: 2%;
+    }
+    #imgScrollContainer {
+        height: 30vw;
+        flex-wrap: wrap;
+    }
+    .morningImgs {
+        width:49%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #artTitle{
+        font-size:2em;
+        text-align:center;
+    }
+    #imgScrollContainer {
+        padding-top:1.5vw;
+        height: 50vw;
+        flex-wrap: wrap;
     }
 }

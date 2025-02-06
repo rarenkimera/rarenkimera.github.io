@@ -15,6 +15,7 @@
     <div id="topBarMobile"> 
         <span onclick="showNavMobile();" id="navOpenButton" >&equiv;</span>
         <a id="titleMobile" href="index.html">RAREN</a>
+        <a id="emptyspace"></a>
     </div>
 
     <div id="sideBarMobile"> 
@@ -40,9 +41,9 @@
             <a href="contact.html">contact</a><br>
         </div>
     </div>
-
     <div id="mainBody">
         <h1 id="artTitle">I'm Not a Morning Person</h1>
+        <!--
         <div class="row">
             <img class="imgShowcase" id="row1Img1" src="3dwork/i_m not a morning person project/1.png" alt="Image_1_Missing" onclick="showImgPreview(this);">
             <img class="imgShowcase" id="row1Img2" src="3dwork/i_m not a morning person project/2.png" alt="Image_2_Missing" onclick="showImgPreview(this);">
@@ -70,8 +71,29 @@
         <div class="row">
             <img class="imgShowcase" id="row7Img1" src="3dwork/i_m not a morning person project/13.png" alt="Image_11_Missing" onclick="showImgPreview(this);">
         </div>
+        -->
+        <div id="morningSection">
+            <img class="imgShowcase" id="mainImgMorning" src="3dwork/i_m not a morning person project/0.png" alt="Main_Image_Missing" onclick="showImgPreview(this);">
+            <div id="imgScrollContainer">
+                <img class="imgShowcase morningImgs" id="morning1" src="3dwork/i_m not a morning person project/1.png" alt="Image_1_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning2" src="3dwork/i_m not a morning person project/2.png" alt="Image_2_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning3" src="3dwork/i_m not a morning person project/3.png" alt="Image_3_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning4" src="3dwork/i_m not a morning person project/4.png" alt="Image_4_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning5" src="3dwork/i_m not a morning person project/5.png" alt="Image_5_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning6" src="3dwork/i_m not a morning person project/6.png" alt="Image_6_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning7" src="3dwork/i_m not a morning person project/7.png" alt="Image_7_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning8" src="3dwork/i_m not a morning person project/8.png" alt="Image_8_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning9" src="3dwork/i_m not a morning person project/9.png" alt="Image_9_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning10" src="3dwork/i_m not a morning person project/10.png" alt="Image_10_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning11" src="3dwork/i_m not a morning person project/11.png" alt="Image_11_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning12" src="3dwork/i_m not a morning person project/12.png" alt="Image_12_Missing" onclick="setMainImgMorning(this);">
+                <img class="imgShowcase morningImgs" id="morning13" src="3dwork/i_m not a morning person project/13.png" alt="Image_13_Missing" onclick="setMainImgMorning(this);">
+            </div>
+        </div>
     </div>
-
+    
+        
+        
     <div id="imgPreviewContainer">
         <img id="imgPreview">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
@@ -93,7 +115,7 @@
             let height = 68/((w1/h1) + (w2/h2));
             console.log(height);
         }
-        imgHeightCalculate('row1Img1', 'row1Img2');
+        //imgHeightCalculate('row1Img1', 'row1Img2');
 
         function showImgPreview(imgs) {
             let expandImg = document.getElementById("imgPreview");
@@ -107,6 +129,11 @@
         function closeNavMobile() {
             let navMobile = document.getElementById("sideBarMobile");
             navMobile.style.left = "-50%";
+        }
+
+        function setMainImgMorning(img) {
+            let morningImg = document.getElementById("mainImgMorning");
+            morningImg.src = img.src;
         }
     </script>
 </body>
