@@ -118,7 +118,7 @@ img {
     }
     #imgScrollContainer {
         padding-top:1.5vw;
-        height: 50vw;
+        height: 60vw;
         flex-wrap: wrap;
     }
 }
